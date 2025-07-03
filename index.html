@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posture Certificate</title>
+    <link rel="stylesheet" href="styles/myStyle.css">
+    <script src="jScripts/JavaScript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+<div id="main-content">
+    <h1>Get Your Posture Certificate</h1>
+    <p>Enter your full name to generate your personalized certificate:</p>
+    <input type="text" id="username" placeholder="Enter your name" />
+    <br>
+    <button onclick="generateCertificate()">Create Certificate</button>
+    <button id="downloadBtn" onclick="downloadPDF()" style="display:none;">Download PDF</button>
+</div>
+
+<div id="pdf-container">
+    <div id="certificate">
+        <div>
+            <div class="cert-icon">🏅</div>
+            <div class="cert-title">Certificate of Completion</div>
+            <p>This is to certify that</p>
+            <div class="cert-name" id="cert-name">[Name]</div>
+            <p>has successfully completed the module:</p>
+            <strong>POSTURE</strong>
+            <p>On <span id="cert-date"></span></p>
+        </div>
+        <div class="footer-line">
+            <div>Date: <span id="cert-date-footer"></span></div>
+            <div>Signature: _______________</div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
